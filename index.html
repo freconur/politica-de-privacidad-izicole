@@ -40,6 +40,15 @@
               bases de datos internas del centro educativo, garantizando que solo el personal y representantes
               vinculados tengan acceso.</p>
           </div>
+          <h3>
+            1.3 Audiencia Objetivo y Restricción de Edad
+          </h3>
+          <p>
+            El uso de la Aplicación móvil de izicole está diseñado exclusivamente para personas adultas (personal de la
+            institución y padres de familia o representantes legales). Los estudiantes menores de edad no disponen de
+            cuentas de acceso directo ni interactúan con la Aplicación móvil, siendo sus datos gestionados únicamente
+            por los adultos autorizados mencionados anteriormente.
+          </p>
         </section>
 
         <section id="data-collection">
@@ -47,23 +56,42 @@
 
           <div class="subsection">
             <h3>2.1 Información Proporcionada por la Institución</h3>
-            <p>Para el funcionamiento del servicio, se procesan datos básicos de identidad (nombre, número de
+            <p>
+              Se procesan datos básicos de identidad (incluyendo nombres completos, fotografías de perfil, número de
+              DNI/Cédula, correo electrónico, rol institucional) y datos de adscripción académica (grado y sección)
+              suministrados previamente por la institución educativa
+
+              <!-- Para el funcionamiento del servicio, se procesan datos básicos de identidad (nombre, número de
               DNI/Cédula, correo electrónico, rol institucional) suministrados previamente por la institución educativa
-              a través de sus sistemas administrativos.</p>
+              a través de sus sistemas administrativos. -->
+            </p>
           </div>
 
           <div class="subsection">
             <h3>2.2 Información Recopilada Automáticamente</h3>
             <ul>
-              <li><strong>Datos de Ubicación:</strong> La Aplicación solicita acceso a la ubicación precisa y aproximada
-                (GPS y red) con el fin estrictamente vinculado a funciones de asistencia, seguridad escolar o logística
-                institucional.</li>
-              <li><strong>Cámara y Almacenamiento:</strong> Se requiere acceso a la cámara y galería de imágenes para
+              <li><strong>Datos de Ubicación:</strong> La Aplicación solicita acceso a la ubicación en primer plano
+                (solo mientras el app está abierta y en uso) con el fin exclusivo de validar que el personal se
+                encuentra dentro del recinto escolar al momento de registrar su asistencia. No se realiza un seguimiento
+                continuo, ni en segundo plano (background), ni se almacenan historiales de movimiento del usuario.</li>
+              <!-- <li><strong>Cámara y Almacenamiento:</strong> Se requiere acceso a la cámara y galería de imágenes para
                 permitir la carga de evidencias pedagógicas, fotos de perfil y documentos dentro del cuaderno digital.
-              </li>
+              </li> -->
+              <li><strong>Archivos y Multimedia:</strong> La Aplicación utiliza las APIs de selección de archivos del
+                sistema (Photo Picker y Document Picker). Esto garantiza que la Aplicación solo acceda a los archivos
+                específicos que el usuario elija voluntariamente para cargar como evidencia académica o foto de perfil,
+                sin tener acceso al resto de su galería privada o almacenamiento local.</li>
               <li><strong>Datos de Rendimiento y Diagnóstico:</strong> Utilizamos <strong>Google Firebase (Analytics y
                   Crashlytics)</strong> para recopilar información técnica sobre errores, cierres inesperados y métricas
                 de uso anonimizadas con el objetivo de mejorar la estabilidad del servicio.</li>
+              <li>
+                <strong>Cámara y QR:</strong> La Aplicación requiere acceso a la camara exclusivamente para: (a) El
+                escaneo de
+                códigos QR institucionales para registro de asistencia; y (b) La captura voluntaria de fotografías por
+                parte del personal para evidencias pedagógicas o fotos de perfil.
+                <!-- La captura voluntaria de fotografías de perfil o evidencias. Importante: La Aplicación no captura
+                imágenes de manera discreta ni almacena grabaciones de video sin la intervención activa del usuario."* -->
+              </li>
             </ul>
           </div>
         </section>
@@ -85,6 +113,8 @@
           <p>La información tratada tiene como únicas finalidades:</p>
           <ul>
             <li>Gestionar el seguimiento académico y administrativo de los estudiantes.</li>
+            <li>Facilitar la comunicación oficial y envío de avisos (Comunicados) entre la institución y los padres o
+              representantes.</li>
             <li>Garantizar la seguridad y el control de acceso a las instalaciones escolares.</li>
             <li>Optimizar el rendimiento técnico de la plataforma.</li>
           </ul>
@@ -119,6 +149,13 @@
               autorizado por la institución.</li>
             <li><strong>Integridad:</strong> Aplicamos procesos para prevenir la alteración o destrucción no autorizada
               de la información.</li>
+            <li>
+              <strong>Visibilidad y Acceso Restringido:</strong> Dentro de la plataforma, la información de los
+              estudiantes
+              (incluyendo nombre y fotografía) es visible únicamente para el personal administrativo y docente
+              debidamente autorizado (Administradores, Directores y Profesores) con el fin exclusivo de identificar
+              correctamente a los destinatarios de las comunicaciones y registros de asistencia.
+            </li>
           </ul>
         </section>
 
